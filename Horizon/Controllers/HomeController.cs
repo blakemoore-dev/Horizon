@@ -30,6 +30,15 @@ namespace Horizon.Controllers
             return View();
         }
 
+        public ActionResult FirstTab()
+        {
+            return PartialView("_FirstTab");
+        }
+        public ActionResult SecondTab()
+        {
+            return PartialView("_SecondTab");
+        }
+
         public IActionResult Weather()
         {
             // Using Open Weather Map from RapidAPI.com ***** 5 Day / 3 Hour Forecast Data *****
