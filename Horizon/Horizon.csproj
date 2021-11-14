@@ -15,4 +15,9 @@
     <Folder Include="Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\external-content.duckduckgo.com.png" />
+    <None Include="wwwroot\images\horizon-svg-17.png" />
+  </ItemGroup>
+
 </Project>

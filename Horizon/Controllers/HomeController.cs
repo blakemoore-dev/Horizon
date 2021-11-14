@@ -27,7 +27,9 @@ namespace Horizon.Controllers
 
         public IActionResult FirstTab()
         {
-            return PartialView("_FirstTab");
+            Weather w = new Weather();
+            w.CityName = "Testing name";
+            return PartialView("w");
         }
         public IActionResult SecondTab()
         {
