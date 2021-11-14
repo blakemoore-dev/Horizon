@@ -1,77 +1,10 @@
 ﻿@model Weather
-@{
-    ViewData["Title"] = "Weather";
-}
+@{ ViewData["Title"] = "Weather"; }
 
-@*<div class="container">
-    <h1>Weather</h1>
-    <p>Message:  @Model.Message</p>
-    <p>City Name:  @Model.CityName</p>
-    <p>Current Temp: @Model.Temp</p>
-    <p>Day 1 Temp Min: @Model.TempMin</p>
-    <p>Day 1 Temp Max: @Model.TempMax</p>
-    <p>Day 1 Humidity: @Model.Humidity</p>
-</div>*@
-
-<!-- Tabs navs -->
-<ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active"
-           id="ex1-tab-1"
-           data-mdb-toggle="tab"
-           href="#ex1-tabs-1"
-           role="tab"
-           aria-controls="ex1-tabs-1"
-           aria-selected="true">Current Weather</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link"
-           id="ex1-tab-2"
-           data-mdb-toggle="tab"
-           href="#ex1-tabs-2"
-           role="tab"
-           aria-controls="ex1-tabs-2"
-           aria-selected="false">Extended Forecast</a>
-    </li>
-</ul>
-<!-- Tabs navs -->
-<!-- Tabs content -->
-<div class="tab-content" id="ex1-content">
-    <div class="tab-pane fade show active"
-         id="ex1-tabs-1"
-         role="tabpanel"
-         aria-labelledby="ex1-tab-1">
-        Tab 1 content
-        <div class="container">
-            <h1>Weather</h1>
-            <p>Message:  @Model.Message</p>
-            <p>City Name:  @Model.CityName</p>
-            <p>Current Temp: @Model.Temp</p>
-            <p>Day 1 Temp Min: @Model.TempMin</p>
-            <p>Day 1 Temp Max: @Model.TempMax</p>
-            <p>Day 1 Humidity: @Model.Humidity</p>
-        </div>
-    </div>
-    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-        Tab 2 content
-    </div>
-</div>
-<!-- Tabs content -->
-
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Test one</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Test two</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Test three</div>
-</div>
-
+<h1>Weather</h1>
+<p>Message:  @Model.Message</p>
+<p>City Name:  @Model.CityName</p>
+<p>Current Temp: @Model.Temp</p>
+<p>Day 1 Temp Min: @Model.TempMin</p>
+<p>Day 1 Temp Max: @Model.TempMax</p>
+<p>Day 1 Humidity: @Model.Humidity</p>

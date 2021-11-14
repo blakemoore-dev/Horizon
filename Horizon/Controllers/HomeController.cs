@@ -25,16 +25,11 @@ namespace Horizon.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public ActionResult FirstTab()
+        public IActionResult FirstTab()
         {
             return PartialView("_FirstTab");
         }
-        public ActionResult SecondTab()
+        public IActionResult SecondTab()
         {
             return PartialView("_SecondTab");
         }
