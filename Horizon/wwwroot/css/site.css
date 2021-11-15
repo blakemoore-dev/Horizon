@@ -24,6 +24,20 @@ a {
   border-color: #1861ac;
 }
 
+.sidebar {
+    position: absolute;
+    height: 100vh;
+    width: 200px;
+    background-color: #0c121a;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#contentMain {
+    margin-left: 200px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -59,6 +73,9 @@ html {
 }
 
 body {
+    height: 100vh;
+    background: linear-gradient(0deg, #1b0262, #000000 40%);
+    background-attachment: fixed;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
