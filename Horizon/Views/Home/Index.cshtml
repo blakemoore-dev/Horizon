@@ -1,7 +1,27 @@
-﻿    @{
-        ViewBag.Title = "Index Page";
-    }
-     
-    <h2>View Details</h2>
-     
-    <strong>Name</strong> : @ViewData["Name"]<br />
+﻿@{ ViewBag.Title = "Index Page"; }
+
+@using (Html.BeginForm("Weather", "Home", FormMethod.Post))
+{ 
+    <table>
+        <tr>
+            <td>City:</td>
+            <td>@Html.TextBox("City")</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+}
+
+@using (Html.BeginForm("ExtendedWeather", "Home", FormMethod.Post))
+{ 
+    <table>
+        <tr>
+            <td>City:</td>
+            <td>@Html.TextBox("City")</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+}

@@ -25,30 +25,10 @@ namespace Horizon.Controllers
             return View();
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
         [HttpPost]
-        public IActionResult Create(Weather w)
-        {
-            try
-            {
-                ViewData["Name"] = w.CityName;
-                return View("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        public IActionResult Weather()
+        public IActionResult Weather(string city)
         {
             var key = _configuration.GetSection("APIKey").Value;
-
-            var city = "alabaster";
 
             // Current weather data
             var client = new RestClient($"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}&units=imperial");
@@ -71,12 +51,12 @@ namespace Horizon.Controllers
 
             return View(weather);
         }
-        public IActionResult ExtendedWeather()
+
+        public IActionResult ExtendedWeather(string city)
         {
             var key = _configuration.GetSection("APIKey").Value;
-            var city = "alabaster";
 
-            // Current weather data
+            // Extended weather data
             var client = new RestClient($"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={key}&units=imperial");
 
             var request = new RestRequest(Method.GET);
