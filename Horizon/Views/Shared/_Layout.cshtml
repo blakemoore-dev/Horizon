@@ -7,29 +7,23 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+
+<body class="container" style="position: fixed; height: 100vh; width: 100%;">
     <header>
-        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark text-dark bg-dark border-bottom box-shadow mb-0">*@
         <nav class="sidebar">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/external-content.duckduckgo.com.png" style="width: 2em;" alt="Alternate Text" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div style="padding-top: 20px;">
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav">
+                        <li style="padding-bottom: 20px;"><a class="" asp-area="" asp-controller="Home" asp-action="Index">
+                                <img src="~/images/external-content.duckduckgo.com.png" style="width: 4em;" alt="Home" /></a></li>
                         <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Current Weather</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Extended Forecast</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Weather</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Weather</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ExtendedWeather">Extended Forecast</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div id="contentMain" class="container">
         <main role="main" class="pb-3 text-light">
             @RenderBody()
@@ -38,11 +32,8 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/5f597d47dc.js" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-
-
-@*<a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>*@
-@*<a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Weather</a>*@
