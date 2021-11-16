@@ -1,4 +1,5 @@
 ﻿using Horizon.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -22,6 +23,25 @@ namespace Horizon.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Weather w)
+        {
+            try
+            {
+                ViewData["Name"] = w.CityName;
+                return View("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         public IActionResult Weather()
