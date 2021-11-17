@@ -8,20 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 
-<body class="container" style="position: fixed; height: 100vh; width: 100%;">
+<body class="container">
     <header>
-        <nav class="sidebar">
-            <div style="padding-top: 20px;">
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav">
-                        <li style="padding-bottom: 20px;"><a class="" asp-area="" asp-controller="Home" asp-action="Index">
-                                <img src="~/images/external-content.duckduckgo.com.png" style="width: 4em;" alt="Home" /></a></li>
-                        <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Current Weather</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ExtendedWeather">Extended Forecast</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        @Html.Partial("_Menu")
     </header>
 
     <div id="contentMain" class="container">

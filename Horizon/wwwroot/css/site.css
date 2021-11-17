@@ -77,6 +77,8 @@ html {
 }
 
 body {
+    position: relative;
+    justify-content: center;
     height: 100vh;
     background: linear-gradient(0deg, #1b0262, #000000 40%);
     background-attachment: fixed;
