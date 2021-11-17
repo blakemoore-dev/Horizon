@@ -7,13 +7,7 @@
                         <img src="~/images/external-content.duckduckgo.com.png" style="width: 4em;" alt="Home" />
                     </a>
                 </li>
-                <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Weather">Current Weather</a></li>
                 <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ExtendedWeather">Extended Forecast</a></li>
-                @using (Html.BeginForm("Weather", "Home", FormMethod.Post))
-                {
-                    <li class="nav-item">@Html.TextBox("City")</li>
-                    <li class="nav-item"><input type="submit" value="Submit" /></li>
-                }
             </ul>
         </div>
     </div>
