@@ -1,13 +1,3 @@
 ﻿@{ ViewBag.Title = "Index Page"; }
 
-@using (Html.BeginForm("Weather", "Home", FormMethod.Post))
-{
-<table>
-    <tr>
-        <td>What's on your <i>Horizon</i> today?</td>
-    </tr>
-    <tr>
-        <td>@Html.TextBox("City")</td>
-        <td><input type="submit" value="Submit" /></td>
-    </tr>
-</table>}
+<p class="text-center">What's on your <i>Horizon</i> today?</p>
