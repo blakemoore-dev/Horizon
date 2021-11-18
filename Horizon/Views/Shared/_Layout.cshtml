@@ -11,8 +11,9 @@
 <body class="container">
     <header>
         @*@Html.Partial("_Menu")*@
-        <partial name="_Menu"/>
     </header>
+
+    <partial name="_Menu" /> <!-- Testing partials -->
 
     <div id="contentMain" class="container">
         <main role="main" class="pb-3 text-light">
@@ -22,6 +23,7 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Added FontAwesome for fun icons -->
     <script src="https://kit.fontawesome.com/5f597d47dc.js" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
