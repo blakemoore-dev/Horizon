@@ -1,7 +1,48 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-.sidebar {
+/*#E7517E*/
+/*#FAB283*/
+/*#62B3C5*/
+/*#A8DCE3*/
+
+.bodyBox {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    background: #FAB283;
+    background-attachment: fixed;
+}
+
+.headBox {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    background: #E7517E;
+}
+
+.navBox {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    background: #62B3C5;
+}
+
+body {
+    /*position: relative;*/
+    /*justify-content: center;*/
+    height: 100vh;
+    background: linear-gradient(0deg, #1b0262, #0c121a 40%);
+    background-attachment: fixed;
+}
+
+/*.sidebar {
     position: absolute;
     height: 10vh;
     width: 200px;
@@ -25,11 +66,11 @@ for details on configuring this project to bundle and minify static web assets. 
     margin-top: 200px;
     height: 100vh;
     background-color: transparent;
-}
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+/*html {
     font-size: 14px;
 }
 
@@ -50,4 +91,4 @@ body {
     height: 100vh;
     background: linear-gradient(0deg, #1b0262, #000000 40%);
     background-attachment: fixed;
-}
+}*/

@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Forecast";
     var data = ViewBag.Data;
+    var num = 2;
 }
 
 <title>Weather</title>
@@ -21,7 +22,13 @@
         </tr>
         @foreach (var item in data)
         {
-            <tr>
+            string test;
+            if (num % 2 == 0)
+            {
+                test = "bg-dark";
+            }
+            else test = "bg-primary";
+            <tr class="@test">
                 <td>@item.TempMin<span>&deg;</span>F</td> <!-- &deg; same as &#176;-->
                 <td>@item.TempMax<span>&#176;</span>F</td>
                 <td><img src="@item.Wicon" alt="Alternate Text" /></td>
@@ -31,6 +38,7 @@
                 @*<td>@item.TimeStamp</td>*@
                 <td>@item.Speed %</td>
             </tr>
+            num++;
         }
     </table>
 </div>

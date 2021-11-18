@@ -1,9 +1,10 @@
 ﻿@{ ViewBag.Title = "Index Page"; }
 
-<p class="text-center">What's on your <i>Horizon</i> today?</p>
 
-@using (Html.BeginForm("ExtendedWeather", "Home", FormMethod.Post))
-{
-    @Html.TextBox("City")
-    <input type="submit" value="Submit" />
-}
+<div>
+    @using (Html.BeginForm("ExtendedWeather", "Home", FormMethod.Post))
+    {
+        <span>Location:</span>@Html.TextBox("City")
+        <input type="submit" value="Submit" />
+    }
+</div>
