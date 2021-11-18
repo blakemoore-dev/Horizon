@@ -57,36 +57,30 @@ namespace Horizon.Controllers
         {
             // Abstract API Key away to appsettings.json (included in .gitignore)
             var key = _configuration.GetSection("APIKey").Value;
-
-            // Extended weather data
+            // API through RestSharp
             var client = new RestClient($"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={key}&units=imperial");
-
             var request = new RestRequest(Method.GET);
             IRestResponse responseCurrent = client.Execute(request);
-
+            // Extended weather data
             var data = JObject.Parse(responseCurrent.Content);
+            // Count of items in parsed JSON list
             var count = Convert.ToInt32(data["cnt"]);
 
-            var wList = new List<ExtendedWeather>();
+            var list = new List<ExtendedWeather>();
 
+            // Loop through parsed JSON data from API and store each individual section into it's own object
             for (int i = 0; i < count; i++)
             {
-                wList.Add(new Models.ExtendedWeather());
-                wList[i].CityName = data["list"][i]["main"]["temp_min"].ToString();
-
-                //ExtendedWeather ew = new ExtendedWeather()
-                //{
-                //    CityName = item["city"]["name"].ToString(),
-                //    TempMin = data["list"][0]["main"]["temp_min"].ToString(),
-                //    TempMax = data["list"][0]["main"]["temp_max"].ToString(),
-                //    // Concatenate icon URL string for current weather icon
-                //    Wicon = @"http://openweathermap.org/img/w/" + data["list"][0]["weather"][0]["icon"].ToString() + ".png",
-                //    Description = data["list"][0]["weather"][0]["description"].ToString(),
-                //    TimeStamp = data["list"][0]["dt_txt"].ToString()
-                //};
+                list.Add(new ExtendedWeather()
+                {
+                    CityName = data["city"]["name"].ToString(),
+                    TempMin = data["list"][i]["main"]["temp_min"].ToString(),
+                    TempMax = data["list"][i]["main"]["temp_min"].ToString(),
+                    Wicon = @"http://openweathermap.org/img/w/" + data["list"][i]["weather"][0]["icon"].ToString() + ".png",
+                    Description = data["list"][i]["weather"][0]["description"].ToString(),
+                    TimeStamp = data["list"][i]["dt_txt"].ToString()
+                });
             }
-
-            //wList.Add(item["main"]["temp"].ToString());
 
             //ExtendedWeather extWeather = new ExtendedWeather()
             //{
@@ -99,7 +93,10 @@ namespace Horizon.Controllers
             //    TimeStamp = data["list"][0]["dt_txt"].ToString()
             //};
 
-            return View(wList);
+            //return View(extWeather);
+
+            ViewBag.Data = list;
+            return View("ExtendedWeather");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
