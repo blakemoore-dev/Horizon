@@ -14,4 +14,5 @@
 - [ ] Refine styling via CSS
 - [ ] Implement exception handling for WindDirection and CardinalDirection in HomeController
 - [ ] Implement exception handling for user input on Index page
-- [ ] Add Speed property to ExtendedWeather.cs
+- [x] Add Speed property to ExtendedWeather.cs
+- [x] Add Precipitiation property to ExtendedWeather.cs
