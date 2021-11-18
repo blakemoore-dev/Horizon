@@ -83,7 +83,9 @@ namespace Horizon.Controllers
                     Description = data["list"][i]["weather"][0]["description"].ToString(),
                     TimeStamp = data["list"][i]["dt_txt"].ToString(),
                     Country = data["city"]["country"].ToString(),
-                    WindDirection = data["list"][i]["wind"]["deg"].ToString()
+                    WindDirection = data["list"][i]["wind"]["deg"].ToString(),
+                    Speed = Convert.ToInt32(data["list"][i]["wind"]["speed"]).ToString(),
+                    Pop = Convert.ToInt32(data["list"][i]["pop"]).ToString()
                 }
                 );
             }

@@ -18,6 +18,8 @@ namespace Horizon.Models
         public string Country { get; set; }
         public string WindDirection { get; set; }
         public string CardinalDirection { get; set; }
+        public string Speed { get; set; }
+        public string Pop { get; set; }
         public List<ExtendedWeather> WeatherList { get; set; }
     }
 }

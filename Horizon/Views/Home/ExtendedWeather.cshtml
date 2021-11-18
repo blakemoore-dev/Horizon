@@ -17,6 +17,7 @@
             <th>What's<i class="fas fa-arrow-up" style="padding-left: 20px;" /></th>
             <th>Wind</th>
             <th>Time of Day</th>
+            <th>Precipitation Chance</th>
         </tr>
         @foreach (var item in data)
         {
@@ -25,9 +26,10 @@
                 <td>@item.TempMax<span>&#176;</span>F</td>
                 <td><img src="@item.Wicon" alt="Alternate Text" /></td>
                 <td>@item.Description</td>
-                <td>@item.CardinalDirection @@ @item.WindDirection<span>&deg;</span></td>
+                <td>@item.Speed<span>Mph</span> by @item.CardinalDirection @@ @item.WindDirection<span>&deg;</span></td>
                 <td>@Convert.ToDateTime(item.TimeStamp)</td> <!-- Convert timestamp to DateTime for legibility -->
                 @*<td>@item.TimeStamp</td>*@
+                <td>@item.Speed %</td>
             </tr>
         }
     </table>
