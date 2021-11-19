@@ -7,6 +7,8 @@
 - Forms now correctly pass data from user input back to controller and return view with correct data.
 - Looping through list of data from JSON and display to view
 
+<img style="" title="Query Results" src="images/../images/result.png" width="100%" />
+
 ### TODO's:
 
 - [x] Abstract API Key away
@@ -19,5 +21,3 @@
 - [ ] Implement exception handling for user input on Index page
 - [x] Add Speed property to ExtendedWeather.cs
 - [x] Add Precipitiation property to ExtendedWeather.cs
-
-<img style="" title="Query Results" src="images/../images/result.png" width="100%" />
