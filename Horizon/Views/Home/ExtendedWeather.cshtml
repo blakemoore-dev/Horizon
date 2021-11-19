@@ -7,13 +7,13 @@
 }
 
 <title>Weather</title>
-<h1>5 Day Forecast for <span>@data[0].CityName, @data[0].Country</span></h1>
+<h1 class="pb-2 mb-0 text-center" style="background-color: #304D60;">5 Day Forecast for <span>@data[0].CityName, @data[0].Country</span></h1>
 
 <div>
-    <table class="table">
+    <table class="table mb-0 text-light" style="background-color: #090a0f">
         <tr>
-            <th><i class="fas fa-temperature-low" style="font-size: 1.5em; color: red;" /></th>
-            <th><i class="fas fa-temperature-high" style="font-size: 1.5em; color: blue;" /></th>
+            <th><i class="fas fa-temperature-low" style="font-size: 1.5em; color: blue;" /></th>
+            <th><i class="fas fa-temperature-high" style="font-size: 1.5em; color: red;" /></th>
             <th><i class="fas fa-cloud-sun-rain" style="font-size: 1.5em; color: gray;"></i></th>
             <th>What's<i class="fas fa-arrow-up" style="padding-left: 20px;" /></th>
             <th>Wind</th>
@@ -25,18 +25,18 @@
             string test;
             if (num % 2 == 0)
             {
-                test = "bg-dark";
+                test = "#0c121a";
             }
-            else test = "bg-primary";
-            <tr class="@test">
+            else test = "#090a0f";
+            <tr style="background-color: @test">
                 <td>@item.TempMin<span>&deg;</span>F</td> <!-- &deg; same as &#176;-->
                 <td>@item.TempMax<span>&#176;</span>F</td>
                 <td><img src="@item.Wicon" alt="Alternate Text" /></td>
                 <td>@item.Description</td>
-                <td>@item.Speed<span>Mph</span> by @item.CardinalDirection @@ @item.WindDirection<span>&deg;</span></td>
+                <td>@item.Speed<span> Mph</span> by @item.CardinalDirection @@ @item.WindDirection<span>&deg;</span></td>
                 <td>@Convert.ToDateTime(item.TimeStamp)</td> <!-- Convert timestamp to DateTime for legibility -->
                 @*<td>@item.TimeStamp</td>*@
-                <td>@item.Speed %</td>
+                <td>@item.Pop %</td>
             </tr>
             num++;
         }

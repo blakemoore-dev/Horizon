@@ -8,33 +8,31 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 
-<body class="text-light">
-    <!--<header>-->
-    @*@Html.Partial("_Menu")*@
-    <!--</header>-->
-
-    <div class="bodyBox rounded">
-        <div class="headBox rounded">
-            <!--<div class="row">
-                <partial name="_Menu" />-->
-            <!-- Testing partials -->
-            <!--</div>-->
-            <div class="row navBox rounded">
-                <div class="col-4">
-                    <a class="" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img src="~/images/external-content.duckduckgo.com.png" style="width: 4em;" alt="Home" />
-                    </a>
-                </div>
-                <div class="col-8">
-                    <h3 class="justify-content-sm-center text-center">What's on your <i>Horizon</i> today?</h3>
-                </div>
-                @*<li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ExtendedWeather">Extended Forecast</a></li>*@
+<body>
+    <div class="bg-transparent text-light bodyBox rounded">
+        <div class="navBox rounded-top d-flex p-3 align-items-center justify-content-between">
+            <div>
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/external-content.duckduckgo.com.png" style="width: 4em;" alt="Home" />
+                </a>
             </div>
-            <div class="row d-flex justify-content-center" style="background-color: #0c121a;">
-                <main role="main" class="text-light">
-                    @RenderBody()
-                </main>
+            <div>
+                @using (Html.BeginForm("ExtendedWeather", "Home", FormMethod.Post))
+                {
+                    @*<span class="pr-1">Location:</span>@Html.TextBox("City")*@
+                    <span class="pr-1">Location:</span>@*@Html.Label("HEY")*@ @Html.TextBox("City" ,null, new { @placeholder = "Birmingham,AL,US"})
+                    <input type="submit" class="btn-dark rounded" value="Submit" />
+                }
             </div>
+        </div>
+        <div class="rounded">
+            <main role="main" class="text-light">
+                @RenderBody()
+            </main>
+        </div>
+        <div class="position-relative">
+            <p class="position-absolute text-light font-weight-lighter font-italic h2" style="z-index: 20; left: 33%; top: 18%; font-size: 4vw;">What's on your</p>
+            <img class="rounded-bottom" src="~/images/horizon-svg-17.png" style="width: 100%; z-index: 10;" />
         </div>
     </div>
 
@@ -46,3 +44,10 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+
+<!--<div class="row">
+    <partial name="_Menu" />-->
+<!-- Testing partials -->
+<!--</div>-->
+@*<li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="ExtendedWeather">Extended Forecast</a></li>*@

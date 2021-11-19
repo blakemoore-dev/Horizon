@@ -73,6 +73,7 @@ namespace Horizon.Controllers
 
             // Loop through parsed JSON data from API and store each individual section into it's own object
             for (int i = 0; i < count; i += 8) // Pared down to only 5 days of forecast data for a more brief overview
+            //for (int i = 0; i < count; i++) // Pared down to only 5 days of forecast data for a more brief overview
             {
                 list.Add(new ExtendedWeather()
                 {

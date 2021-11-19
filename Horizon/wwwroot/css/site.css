@@ -1,45 +1,52 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/* vvvvv Colors vvvvv */
 /*#E7517E*/
 /*#FAB283*/
 /*#62B3C5*/
 /*#A8DCE3*/
+/*#304D60*/
+/*#0c121a*/
+/*#090a0f*/
+/* ^^^^^ Colors ^^^^^ */
 
 .bodyBox {
     position: absolute;
     left: 10%;
     right: 10%;
-    top: 10%;
-    bottom: 10%;
-    background: #FAB283;
+    top: 4%;
+    background: #0c121a;
     background-attachment: fixed;
-}
-
-.headBox {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    top: 10%;
-    bottom: 10%;
-    background: #E7517E;
+    border: solid 1px white;
 }
 
 .navBox {
-    position: absolute;
+    /*position: absolute;
     left: 10%;
     right: 10%;
     top: 10%;
-    bottom: 10%;
-    background: #62B3C5;
+    bottom: 10%;*/
+    background: #0c121a;
 }
 
 body {
-    /*position: relative;*/
+    position: relative;
     /*justify-content: center;*/
     height: 100vh;
-    background: linear-gradient(0deg, #1b0262, #0c121a 40%);
+    background: linear-gradient(0deg, #FAB283, #1b0262 40%, #000000);
     background-attachment: fixed;
+    z-index: 2;
+}
+
+.table
+{
+    /*border: solid 1px;*/
+}
+
+.table th,
+.table td {
+    border: 0;
 }
 
 /*.sidebar {
