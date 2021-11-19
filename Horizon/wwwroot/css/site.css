@@ -34,7 +34,8 @@ body {
     position: relative;
     /*justify-content: center;*/
     height: 100vh;
-    background: linear-gradient(0deg, #FAB283, #1b0262 40%, #000000);
+    /*background: linear-gradient(0deg, #FAB283, #1b0262 40%, #000000);*/
+    background-image: url("../images/overlay.png"), linear-gradient(0deg, #FAB283, #1b0262 40%, #000000);
     background-attachment: fixed;
     z-index: 2;
 }
